@@ -71,12 +71,12 @@
 <br><br>
 The detection circuit we build consists of two components: photoresistors and resistors. the circuit is shown in the diagram below. Note that the circuit is set up with a pull down resistor in order to avoid floating values that may make it hard or impossible to read the analog circuit properly. After this circuit was setup on a breadboard, the integrity and behavior of the circuit were verified. This was done by building a second circuit that consisted of an IR LED that was powered with a signal generator. The signal generator was configured to send sinusoidal signals to the LED at 1kHZ. That set up emulated the signals that we expected to find in our maze during the final lab. We used this set up then to send signals to our phototransistor and used an oscilloscope in order to measure the signal detected by the phototransistor to verify that it behaved as expected. It did, and a snap shot of the signal observed in the oscilloscope is shown below. 
 <br><br>
-       <br> <img src="tcirc.PNG" class="rounded float-left" width="400" height="400"><br>
-       <br> <img src="Ipic.jpg" class="rounded float-left" width="400" height="400"><br>
-       <br> <img src="rpic.jpg" class="rounded float-left" width="400" height="400"><br>
+       <br> <img src="tcirc.PNG" class="img-fluid" width="400" height="400"><br>
+       <br> <img src="Ipic.jpg" class="img-fluid" width="400" height="400"><br>
+       <br> <img src="rpic.jpg" class="img-fluid" width="400" height="400"><br>
 After verifying the correctness of our circuit we attached the circuit analog pin to our Arduino and used the code provided in class to measure the frequency of the signal and print it to the serial monitor. The code uses an internal reference voltage of 1.5V to determine the value of our signal relevant to ground and then uses the count of times the signal crosses the reference voltage in a period of time to find the frequency of the analog signal. We measured a frequency of 1 kHz with our circuit, and recorded the output of our serial monitor. A screenshot of that output is shown below. By verifying our circuit using an oscilloscope first, we were able to debug the code and the Arduino set up faster. One of the challenges that faced us was that the photoresistor wasn't sensitive enough to the signal, this was a consequence of the reference voltage being too high after. After adjusting that, we were ready to detect any treasures in the final maze that we will have to solve in the end of the lass and moved on to the next part!</p>
-       <br> <img src="opic.jpg" class="rounded float-left" width="400" height="400"><br>
-      <br> <img src="Picture1.png" class="rounded float-left" width="400" height="400"><br>
+       <br> <img src="opic.jpg" class="img-fluid" width="400" height="400"><br>
+      <br> <img src="Picture1.png" class="img-fluid" width="400" height="400"><br>
       <h1  class="display-5">The Base Station (aka the mothership)</h1>
        <p class="lead">
       The final part of this class will require a base station that has RF communication capability and that connects to our robot remotely. In this portion of the lab we set up the breadboard and the Arduino for the base lab, but do not complete the RF communication part. We also configure a 7-segment display that will be used to display the frequency that the robot measures as it traverses the maze using the sensors we set up in the first lab of the part.
@@ -84,11 +84,11 @@ After verifying the correctness of our circuit we attached the circuit analog pi
          
          The circuit of the seven segment display was given in the lab handout and building up was a tedious but straightforward task with the aid of the data sheet. The seven segment display that we used was the TDCG1050M Green LED display, which is in a common anode configuration. It was used in conjunction with a shift register and 4 PNP transistors. The shift register was used to minimize the number of pins that will be used directly with the Arduino in order to leave the rest of the pins available for future usage. A shortcoming of this approach is that we can light only one digit of the 7 segment display at a time, since we use the shift register to light up the digits sequentially. The effect is not usually noticeable but using a camera with many FPS's makes it pretty obvious. It is also worth noting that the PNP transistors are used to prevent the circuit from drawing too much power from the Arduino. The circuit was built very carefully, and due to that minimal debugging was necessary. 
 
-         <br> <img src="fcirc.PNG" class="rounded float-left" width="400" height="400"><br>
-         <br> <img src="scirc.PNG" class="rounded float-left" width="400" height="400"><br>
+         <br> <img src="fcirc.PNG" class="img-fluid" width="400" height="400"><br>
+         <br> <img src="scirc.PNG" class="img-fluid" width="400" height="400"><br>
          After setting up the circuit code that was provided in class was "hacked" in order to print custom numbers to the circuit. At first we printed the numbers in the wrong order, but the problem was quickly fixed by switching the digital write pins to each of the digits of the circuits. After that step, we configured the code to write decimal numbers with two decimal places when the number to display was above a certain threshold, namely 999. pictures of the Final board and the display working are shown below.
-         <br> <img src="npic.jpg" class="rounded float-left" width="400" height="400"><br>
-         <br> <img src="dpic.jpg" class="rounded float-left" width="400" height="400"><br>
+         <br> <img src="npic.jpg" class="img-fluid" width="400" height="400"><br>
+         <br> <img src="dpic.jpg" class="img-fluid" width="400" height="400"><br>
          <br><br>
          This was a fun lab overall.
       
