@@ -46,23 +46,26 @@
 
   <div class="jumbotron jumbotron-fluid" style="background-color:#FFFFFF">
     <div class="container">
-      <h1  class="display-4">Lab 1</h1>
-      <p class="lead">In this initial lab we set up the main actuators of the robot, the servos, as well as the ultrasonic sensors which are essential to its functionality and its ability to solve the maze. In the sections below we elaborate on the steps we took to assemble the robot frame and configure the servos and the ultrasonic sensors. We describe why servos, rather than other actuators, were used and what challenges were faced in the process of configuring them. Afterwards we go over the ultrasonic sensors, how they work, and how our code. Finally we show our robot routinely navigating a very basic maze described by the course staff! </p>
+      <h1  class="display-4">Lab 2</h1>
+      <p class="lead">In the previous labs we built the robot base, its actuators, and gave it ultrasonic sensor to guide its sensor. In this lab we add phototransistors to enable us to detect light being emitted in the environment of the robot. These phototransistors will guide the robot in its final mission to find and identify targets in a maze at the end of the class. In particular, these phototransistors will be used in conjunction with the analog to digital convertor on board of the Arduino Nano in order to detect when the robot is very close to a treasure that is marked emitting a particular frequency. In this lab we set up the mechanism for using the phototransistors to detect what frequency is being emitted near the robot.
+In addition, we start establishing the base station for the robot which consist of the an Arduino n a bread board saw  well as a seven segment led display that will be used in order to display the frequency the robot is measuring with its sensors. the set up of the seven segment led and the base station was done as instructed in the lab. In the labs that follow this one we add Bluetooth modules for communication between the robot and the base station started here. </p>
       <h1  class="display-5">Materials</h1>
       <ul>
-        <li>Arduino Nano Every</li>
-        <li>Batteries</li>
-        <li>Frame</li>
-        <li>FSR90 Servos</li>
-        <li>Front Wheel</li>
-        <li>HCSR04 Ultrasonic Sensors</li>
-        <li><Wires/li>
-        <li>Wheels</li>
-        <li>patience</li>
+        <li>Robot</li>
+        <li>Long breadboard</li>
+        <li>Signal Generator</li>
+        <li>3 x phototransistor</li>
+        <li>IR LED + resistor</li>
+        <li>Oscilloscope</li>
+        <li>Arduino</li>
+        <li>SN74HC595N registeri>
+        <li>8 x 330 ohms resistors</li>
+         <li>Many Many Wires</li>
+        
       
       
       </ul>
-      <h1  class="display-5">Assembling the Frame</h1>
+      <h1  class="display-5">Light Detection and Frequency detection</h1>
       <p class="lead">The robot came with a red aluminum frame that has mounts for two servos as well as a front wheel. Due to availability, a caster wheel was used as the front wheel. Two FS90r servos capable of full rotation were mounted on the frame. The process was challenging because of the size of the screws. After mounting the servos and the front wheel, back wheels were attached to servos. By this point the chassis of the robot was complete. Afterward, batteries were mounted to the top of the robot using Velcro. A battery pack of AA batteries was used in conjunction with a 9V battery. The 9V battery is intended to power the Arduino, while the AA battery pack is intended to power the servos on the device. Afterwards, the final step was attaching a breadboard on top of the two batteries, which is where all of the of the electronics are assembled. The assembly of the electronics is described in the next section.</p>
       <img src="IMG_20210926_223954.jpg" class="rounded float-left" width="800" height="800">
        <h1  class="display-5">Assembling the Electronics</h1>
